@@ -23,38 +23,42 @@ def modpow(x,n,m):
     return modpow(x*(x%m),n/2,m)%m
   elif n%2 == 1:
     return (x *  modpow(x*(x%m),(n-1)/2,m)%m )%m
-
+def isprime(x):
+    for i in range(2, int(math.sqrt(x))+1):
+        if x % i == 0:
+            return False
+    else:
+        return True
 
 #incomplete
-class modRSA:
+class RSA:
 
     def write(self, message):
-
+        self.translated = ""
         p = 73
         q = 953
 
-        n = p * q;
+        self.n = p * q;
         r = (p - 1) * (q - 1)
-
         k = r + 1;
         while (isprime(k) == True):
             k += r
-
         e = 1
-        d = 0
+        self.d = 0
         for j in range(e + 1, k):
             if k % j == 0:
                 if j > e:
                     e = j
-                    d = k / j
+                    self.d = k / j
                     break
+        for i in message:
+            cipher = modpow(ord(i), e, self.n)
+            self.translated += str(cipher) + ' '
+        return self.translated
 
-        for i in words[z]:
-            for j in range(e + 1, k):
-                if k % j == 0:
-                    if j > e:
-                        e = j
-                        d = k / j
-                        break
-            cipher = modpow(ord(i), e, n)
-            print(cipher, end = ' ')
+    def read(self, message):
+        arr = message.split()
+        self.decoded = ""
+        for i in arr:
+            self.decoded += chr(modpow(int(i), self.d, self.n))
+        return self.decoded
