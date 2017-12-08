@@ -12,15 +12,16 @@ class Piglatin:
 			conso = ''
 			if self.vowels.count(dirty[l][0]) >= 1:
 				clean += ''+dirty[l]+'yay '
+				continue
 			for n in range(len(dirty[l])):
 				if self.consonants.count(dirty[l][n]) == 1:
 					conso += dirty[l][n]
 				else:
-					stem = str(dirty[l][n-1: -1]) + ''+conso+'ay'
+					stem = str(dirty[l][n:]) + ''+conso+'ay'
 					if l != (len(dirty))-1:
-						clean += ''+stem+' '
+						clean += stem+' '
 					else:
-						clean += ''+stem+'.'
+						clean += stem+'.'
 					break
 		return clean
 
