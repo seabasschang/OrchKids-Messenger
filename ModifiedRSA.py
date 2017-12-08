@@ -1,5 +1,9 @@
 import math
+# How it works:
+# https://en.wikipedia.org/wiki/RSA_(cryptosystem)
 
+
+#Utility functions for performing calculations
 def egcd(a, b):
     if a == 0:
         return (b, 0, 1)
@@ -30,32 +34,46 @@ def isprime(x):
     else:
         return True
 
-#incomplete
+#RSA class
 class RSA:
 
+    # e is a public key <-- Everyone can use this key to encrypt the message
+    # d is a private key <-- Only the person with the private key can decrypt the message
+
+    #user can use their own primes to generate keys if they want
+    #init function creates public and private key
+    def __init__(self, prime1 = 73, prime2 = 953):
+        self.p = prime1
+        self.q = prime2
+
+        self.n = self.p * self.q;
+        self.r = (self.p - 1) * (self.q - 1)
+        self.k = self.r + 1;
+        while (isprime(self.k) == True):
+            self.k += self.r
+        self.e = 1
+        self.d = 0
+        for j in range(self.e + 1, self.k):
+            if self.k % j == 0:
+                if j > self.e:
+                    self.e = j
+                    self.d = self.k / j
+                    break
+
+    #function which encrypts the string, making each character a number which has been encrypted.
+    #uses public key to encrypt
+    #returns a string of numbers
     def write(self, message):
         self.translated = ""
-        p = 73
-        q = 953
-
-        self.n = p * q;
-        r = (p - 1) * (q - 1)
-        k = r + 1;
-        while (isprime(k) == True):
-            k += r
-        e = 1
-        self.d = 0
-        for j in range(e + 1, k):
-            if k % j == 0:
-                if j > e:
-                    e = j
-                    self.d = k / j
-                    break
         for i in message:
-            cipher = modpow(ord(i), e, self.n)
+            cipher = modpow(ord(i), self.e, self.n)
             self.translated += str(cipher) + ' '
         return self.translated
 
+
+    #function which decrypts the string, making each number the original character.
+    #uses the private key to decrypt
+    #returns the string.
     def read(self, message):
         arr = message.split()
         self.decoded = ""
