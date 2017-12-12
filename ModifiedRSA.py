@@ -4,6 +4,7 @@ import math
 
 
 #Utility functions for performing calculations
+#Fast GCD function
 def egcd(a, b):
     if a == 0:
         return (b, 0, 1)
@@ -11,6 +12,7 @@ def egcd(a, b):
         g, y, x = egcd(b % a, a)
         return (g, x - (b // a) * y, y)
 
+#Finding the Inverse Mod of a value
 def modinv(a, m):
     g, x, y = egcd(a, m)
     if g != 1:
@@ -18,6 +20,7 @@ def modinv(a, m):
     else:
         return x % m
 
+#Finding x^n mod m fast
 def modpow(x,n,m):
   if n == 0:
     return 1
@@ -27,6 +30,8 @@ def modpow(x,n,m):
     return modpow(x*(x%m),n/2,m)%m
   elif n%2 == 1:
     return (x *  modpow(x*(x%m),(n-1)/2,m)%m )%m
+
+#Is x prime?
 def isprime(x):
     for i in range(2, int(math.sqrt(x))+1):
         if x % i == 0:
