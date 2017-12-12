@@ -1,4 +1,5 @@
 class MorseCode:
+	#sources: http://www.geeksforgeeks.org/morse-code-translator-python/
 	def write(self, message):
 		#When MorseCode is imported into the runner, it takes the message variable from the runner and uses it in the write function
 		morse = {'a': '•-', 
@@ -43,7 +44,7 @@ class MorseCode:
 				'?': '••--••',
 				';': '-•-•-',
 				':': '---•••'}
-		#The morse variable holds the morse code dictionary. It assigns letters, numbers, and punctuation to a series of short and long dashes.
+		#The morse variable holds the morse code dictionary.
 
 		self.encoded=''
 		#self.encoded creates a string to hold the new, encrypted message.
@@ -63,7 +64,9 @@ class MorseCode:
 		#This returns a string to the runner file, but it is now written in morse code.
 
 
-
+#The Morse Code class takes a message from the runner file and runs that message through the write function.
+#The write function breaks apart the message and rewrites every letter as morse code symbols
+#The function then returns the new morse code message back to the runner file to be stored.
 
 
  

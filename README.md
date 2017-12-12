@@ -3,7 +3,7 @@
 ## Description
 This masterwork was composed by 3 Choate Rosemary Hall students - Connie Xiao, Sebastian Chang and Zhi Wei Gan.
 The program has the capability to translate/encode messages. It does **RSA** encryption, **Pig Latin** translation as well as **Morse Code** translation.
-It also has the capability to read previously translated messages from the file or console and convert it back to the original message.
+It also has the capability to read previously translated messages (in RSA) from the file or console and convert it back to the original message.
 
 Run the code, and you will be guided through instructions on how to use the program.
 
@@ -34,7 +34,6 @@ The class encodes a message by pairing each letter from the message with a corre
 
 For the purposes of this messaging system, the Internation Morse Code language was implemented.
 
-
 ### Transmitter Class
 The transmitter class is initiated with a file name and a mode, which determines if it is read or write.
 The transmitter class writes a message to the file which the class object was initiated with, using the ***.toFile(message)*** function.
@@ -54,3 +53,16 @@ For reading:
   * If from file, the program asks what file the translated message is located, and what type of message it is. It then outputs the original message to the console.
 
 ![alt text](https://www.universal-translation-services.com/wp-content/uploads/2016/10/translator-250x250.png "IMAGE")
+
+###Reflections
+**Connie:**
+I worked on writing the Morse Code class. Once I had finished that class, I imported it into the runner file and did a few test runs.
+In general, each of us worked individually on our separate messaging systems, but then we all contributed to the runner file.
+I put most of my work into the Morse Code class and less so into the runner and filing files.
+
+I enjoyed using Github desktop mostly because it centralized everyone's work in one place. I didn't have to scramble to find anyone else's code.
+This made it much easier to work on the runner file and send our changes immediately back to the entire group.
+The one thing I did find annoying was having to commit changes so often.
+When I am doing test runs, I make small corrections, but for each one I think it will be the last correction I need to make.
+This is usually not the case, so I end up making multiple commits for changing one small thing.
+However, that's a very minor issue. Once you get used to using Github, it seems only logical that you would want to store all of your work there.
