@@ -2,6 +2,7 @@
 from ModifiedRSA import RSA
 from transmitter import transmitTool
 from piglatin import Piglatin
+from morsecode import MorseCode
 # import your classes here
 
 
@@ -35,7 +36,9 @@ if "write" in action:
             tTool.toFile(translated)
             runflag = 0
         elif "morse" in method:
-            # do your stuff here
+            morseCodeTool = MorseCode()
+            translated = morseCodeTool.write(message)
+            tTool.toFile(translated)
             runflag = 0
         else:
             #Error checking
