@@ -43,7 +43,7 @@ if "write" in action:
         else:
             #Error checking
             print("That was not an option! Please try again!")
-    print("Action Completed! Written " + message + " to " + output)
+    print("Action Completed! Written '" + message + "' to " + output)
 
 
 #If the user wants to read:
@@ -58,15 +58,12 @@ if "read" in action:
         runflag = 1
         while runflag:
             #Same as above
-            method = input("What is the type of your message?  (RSA or Morse) ").lower()
+            method = input("What is the type of your message?  (RSA) ").lower()
             if "rsa" in method:
                 #Reading using the RSA object
                 RSAtool = RSA()
                 decoded = RSAtool.read(message)
                 print("Message: " + decoded)
-                runflag = 0
-            elif "morse" in method:
-                # do your stuff here
                 runflag = 0
             else:
                 print("That was not an option! Please try again!")
@@ -80,15 +77,12 @@ if "read" in action:
         #Same as above
         runflag = 1
         while runflag:
-            method = input("What is the type of your message?  (RSA or Morse) ").lower()
+            method = input("What is the type of your message?  (RSA) ").lower()
             if "rsa" in method:
                 #Reading from file using transmitTool object and outputting to console original text using RSA read function
                 RSAtool = RSA()
                 decoded = RSAtool.read(tTool.fromFile())
                 print("Message: " + decoded)
-                runflag = 0
-            elif "morse" in method:
-                # do your stuff here
                 runflag = 0
             else:
                 print("That was not an option! Please try again!")

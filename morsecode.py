@@ -1,7 +1,5 @@
 class MorseCode:
-	def __init__(self, message):
-		self.message = message
-	def encrypt(self, message):
+	def write(self, message):
 		morse = {'a': '•-', 
 				'b': '-•••', 
 				'c': '-•-•', 
@@ -44,14 +42,14 @@ class MorseCode:
 				'?': '••--••',
 				';': '-•-•-',
 				':': '---•••'}
-
 		
-		encoded=''
+		self.encoded=''
 		for i in message:
-			encoded+=(morse[i.lower()]+'/')
-		return encoded
+			self.encoded+=(morse[i.lower()]+'/')
+		return self.encoded
 
 
-MorseCode.encrypt()
+
+
 
  
