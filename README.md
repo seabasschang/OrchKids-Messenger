@@ -1,7 +1,7 @@
 # Messenger by OrchKids
 
 ## Description
-This masterwork was composed by 3 Choate Rosemary Hall students - Connie Xiao, Sebastian Chang and Zhi Wei Gan. 
+This masterwork was composed by 3 Choate Rosemary Hall students - Connie Xiao, Sebastian Chang and Zhi Wei Gan.
 The program has the capability to translate/encode messages. It does **RSA** encryption, **Pig Latin** translation as well as **Morse Code** translation.
 It also has the capability to read previously translated messages from the file or console and convert it back to the original message.
 
@@ -23,11 +23,11 @@ The runner file first asks if the user wants to read or write to a file.
 For writing:
 1. The runner file asks the user for a message which they want to translate and be written to a file.
 2. It then asks the name of the file the user wants to write to. If the file does not exist, it is created.
-3. It asks what language the user wants to translate into. If the language is not found, it prompts the user again. 
+3. It asks what language the user wants to translate into. If the language is not found, it prompts the user again.
 
 For reading:
 1. It asks the user if the message that they want to translate is in a file, or if they would want to take input from the console.
-⋅⋅* If console, the program asks what the translated message is, and what type of message it is. It then outputs the original message to the console.
-⋅⋅* If from file, the program asks what file the translated message is located, and what type of message it is. It then outputs the original message to the console.
+  * If console, the program asks what the translated message is, and what type of message it is. It then outputs the original message to the console.
+  * If from file, the program asks what file the translated message is located, and what type of message it is. It then outputs the original message to the console.
 
 ![alt text](https://www.universal-translation-services.com/wp-content/uploads/2016/10/translator-250x250.png "IMAGE")
