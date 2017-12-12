@@ -27,7 +27,7 @@ For writing:
 
 For reading:
 1. It asks the user if the message that they want to translate is in a file, or if they would want to take input from the console.
-  a. If console, the program asks what the translated message is, and what type of message it is. It then outputs the original message to the console.
-  b. If from file, the program asks what file the translated message is located, and what type of message it is. It then outputs the original message to the console.
+..* If console, the program asks what the translated message is, and what type of message it is. It then outputs the original message to the console.
+..* If from file, the program asks what file the translated message is located, and what type of message it is. It then outputs the original message to the console.
 
 ![alt text](https://www.universal-translation-services.com/wp-content/uploads/2016/10/translator-250x250.png "IMAGE")
