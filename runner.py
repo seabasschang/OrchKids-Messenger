@@ -12,7 +12,7 @@ action = input("Do you want to read or write? ").lower()
 #If the user wants to write:
 if "write" in action:
     #What is the message the user wants to send?
-    message = input("What do you want to send? ")
+    message = input("What do you want to send? (Your message) ")
     #Where does the user want to output to?
     output = input("What is the name of the file you want to write into? ")
     #Init of Transmitter class
@@ -52,7 +52,7 @@ if "read" in action:
     #Input from console
     if "console" in inputmethod:
         #Translated message content
-        message = input("What is your message? ")
+        message = input("What is your message? (Your message) ")
 
         #Error checking for availability of language translation
         runflag = 1
