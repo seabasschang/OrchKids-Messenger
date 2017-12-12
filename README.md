@@ -19,7 +19,7 @@ It has the capability to translate a string of English text into the famous chil
 As a reminder, Pig Latin takes a string of words,
 (ex. "Zhi is great!")
 flips them based on the location of the first vowel in the word,
-(ex. "izh is eatgr!") 
+(ex. "izh is eatgr!")
 and then adding either "yay" or "ay" to the end of the word.
 (ex. "izhay isyay eatgray!")
 
@@ -54,7 +54,7 @@ For reading:
 
 ![alt text](https://www.universal-translation-services.com/wp-content/uploads/2016/10/translator-250x250.png "IMAGE")
 
-###Reflections
+### Reflections
 **Connie:**
 I worked on writing the Morse Code class. Once I had finished that class, I imported it into the runner file and did a few test runs.
 In general, each of us worked individually on our separate messaging systems, but then we all contributed to the runner file.
@@ -66,3 +66,8 @@ The one thing I did find annoying was having to commit changes so often.
 When I am doing test runs, I make small corrections, but for each one I think it will be the last correction I need to make.
 This is usually not the case, so I end up making multiple commits for changing one small thing.
 However, that's a very minor issue. Once you get used to using Github, it seems only logical that you would want to store all of your work there.
+
+**Zhi:**
+I worked on the runner file and RSA class. The RSA class was a bit of a challenge because the RSA code I had written beforehand was uncommented and messy. I figured it all out in the end. The importance of commenting really shone through in those moments of facepalm. The runner class was fun to implement because it would have to incorporate everyone's work without their work being completed yet. We planned out how everything came together and we communicated that effectively so everyone knew what they had to do.
+
+I enjoyed practicing my use of GitHub and markdown. I found it very useful to split our work up into different files, because it made it easier to pull and merge, without having to deal with messy pull requests and merging.
