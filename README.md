@@ -15,13 +15,16 @@ It also has the capabiltiy to decode a message using the public key generated wi
 ### Pig Latin Class
 The Pig Latin class is initiated with a set of characters defined as either consonants, vowels, or punctuation.
 It has the capability to translate a string of English text into the famous children's code language Pig Latin, using the write function.
+
 As a reminder, Pig Latin takes a string of words,
 (ex. "Zhi is great!")
 flips them based on the location of the first vowel in the word,
 (ex. "izh is eatgr!") 
 and then adding either "yay" or "ay" to the end of the word.
 (ex. "izhay isyay eatgray!")
+
 ***.write()*** prompts you to enter English text, and returns the translated text.
+
 Due to the complexity of the English language, and despite the many error-checking features in the code, there are still exceptions that can escape the code. However, the code works for most words and phrases quite well.
 
 ### Transmitter Class
