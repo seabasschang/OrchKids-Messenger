@@ -1,13 +1,13 @@
 class Piglatin:
 	def __init__(self):
-		self.consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", 
+		self.consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l",
 		"m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z", "'"]
 		self.vowels = ["a", "e", "i", "o", "u"]
 		self.punct = [".", ",", "?", "!"]
 		#Characters sorted as attributes for easy reference.
 
-	def write(self):
-		dirty = str(input('Input English Here: ')).lower().split(' ')
+	def write(self, message):
+		dirty = message.split(' ')
 		#Split input into array of words.
 		clean = ''
 		#New "clean" string.
@@ -37,7 +37,7 @@ class Piglatin:
 							if self.consonants.count(conso[d]) == 1 and conso[d] != 'y':
 								clean += conso[d]
 								ycase += conso[d]
-							#If is a following consonant, add it to the sentence and move to the next letter. 
+							#If is a following consonant, add it to the sentence and move to the next letter.
 							elif conso[d] == 'y':
 								clean += conso[d:] + ycase + 'ay '
 								break
@@ -51,7 +51,7 @@ class Piglatin:
 						go = 1
 						if self.vowels.count(trunk[d]) == 1 or self.consonants.count(trunk[d]) == 1:
 							clean += trunk[d]
-						#If is a following vowel or consonant, add it to the sentence and move to the next letter. 
+						#If is a following vowel or consonant, add it to the sentence and move to the next letter.
 						elif self.punct.count(trunk[d]) == 1:
 							clean += ''+conso+'ay'+trunk[d]+' '
 							go = 0
@@ -61,5 +61,5 @@ class Piglatin:
 					#If there is no punctuation add "conso-ay_" to the end and go to the next word
 					break
 		return clean
-		#Due to the complexity of the English language, this program does not function properly for all words. 
+		#Due to the complexity of the English language, this program does not function properly for all words.
 		#There are many error-checking features, but not enough to catch all inconsistencies.
