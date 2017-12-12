@@ -1,7 +1,6 @@
-
 class MorseCode:
 	#def __init__(self, message):
-		#self•message = message
+		#self.message = message
 	def encrypt():
 		morse = {'a': '•-', 
 				'b': '-•••', 
@@ -54,6 +53,5 @@ class MorseCode:
 
 
 MorseCode.encrypt()
-
 
  
