@@ -9,13 +9,13 @@ Run the code, and you will be guided through instructions on how to use the prog
 
 ### RSA Class
 The RSA class can be initiated with two prime numbers as parameters to generate the private and public key, however they default to 73 and 953.
-It has the capability to encode a message using the private key generated with the prime numbers, using the write function. .write(message) returns the encoded string.
-It also has the capabiltiy to decode a message using the public key generated with the prime numbers given, using the read function. .read(message) returns the decoded string.
+It has the capability to encode a message using the private key generated with the prime numbers, using the write function. ***.write(message)*** returns the encoded string.
+It also has the capabiltiy to decode a message using the public key generated with the prime numbers given, using the read function. ***.read(message)*** returns the decoded string.
 
 ### Transmitter Class
 The transmitter class is initiated with a file name and a mode, which determines if it is read or write.
-The transmitter class writes a message to the file which the class object was initiated with, using the .toFile(message) function.
-The transmitter class can also read a message from the file which the class object was initated with, using the fromFile() function.
+The transmitter class writes a message to the file which the class object was initiated with, using the ***.toFile(message)*** function.
+The transmitter class can also read a message from the file which the class object was initated with, using the ***.fromFile()*** function.
 
 ### Runner File
 The runner file first asks if the user wants to read or write to a file.
