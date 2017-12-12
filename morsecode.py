@@ -45,6 +45,7 @@ class MorseCode:
 				';': '-•-•-',
 				':': '---•••'}
 		#The morse variable holds the morse code dictionary.
+		#Jack Fenton recommended the use of the special dots by using the alt 8 keys.
 
 		self.encoded=''
 		#self.encoded creates a string to hold the new, encrypted message.
